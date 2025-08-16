@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Tutorial Stacer - Monitorización y Optimización de Ubuntu</title>
+        <meta name="Mantenimiento y optimización" content="Mantenimiento y optimización con Stacer en Ubuntu 22.04 LTS">
+        <meta author="carolusquintae" content="Hecho por carolusquintae">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/estilo.css">
+    </head>
+    
+    <body>
+	    <header>
+            <h1>Tutorial Stacer - Mantenimiento y optimización en Ubuntu 22.04 LTS</h1>
+
+            <div class="initial-warning">
+                <p>
+                    <strong>⚠️ Nota importante para Ubuntu 22.04 LTS:</strong> Algunas funciones de Stacer pueden no estar disponibles o comportarse 
+                    diferente en esta versión. Recomendamos leer las limitaciones más abajo.
+                </p>
+            <div>
+        </header>
+
+        <main>
+            <section id="instalacion">
+                <h2>Instalación de Stacer</h2>
+                <p>Ejecuta en terminal:</p>
+                <code>sudo apt install stacer</code>
+                <img src="./images/stacer_instalation.png" alt="Instalación de Stacer en la terminal" class="screenshot">
+                <p>O instala la última versión desde GitHub:</p>
+                <code>
+                    wget https://github.com/oguzhaninan/Stacer/releases/download/v1.2.0/stacer_1.2.0_amd64.deb <br>
+                    sudo dpkg -i stacer_*.deb
+                </code>
+            </section>
+
+            <section id="uso">
+                <h2>Uso de Stacer</h2>
+
+                <h3>1. Panel de Resumen (Dashboard)</h3>
+                <img src="./images/stacer_dashboard.png" alt="Dashboard de Stacer" class="screenshot">
+
+                <p>Muestra información en tiempo real sobre:</p>
+                <ul>
+                    <li>Uso de CPU y temperatura</li>
+                    <li>Consumo de RAM y swap</li>
+                    <li>Espacio en disco</li>
+                    <li>Actividad de red</li>
+                </ul>
+
+                <h3>2. Limpieza del Sistema (System Cleaner)</h3>
+                <img src="./images/stacer_cleaner.png" alt="Limpieza en Stacer" class="screenshot">
+
+                <p>Elimina:</p>
+                <ul>
+                    <li>Archivos temporales</li>
+                    <li>Caché de aplicaciones</li>
+                    <li>Paquetes obsoletos</li>
+                    <li>Registros (logs)</li>
+                </ul>
+
+                <h3>3. Monitorización (Resources)</h3>
+                <img src="./images/stacer_resources1.png" alt="Monitorización en Stacer" class="screenshot">
+                <img src="./images/stacer_resources2.png" alt="Monitorización en Stacer" class="screenshot">
+
+                <p>Gráficos detallados de:</p>
+                <ul>
+                    <li>Uso de CPU por núcleo</li>
+                    <li>Historial de consumo de RAM</li>
+                    <li>Actividad de disco</li>
+                    <li>Tráfico de red</li>
+                </ul>
+
+                <h3>4. Gestión de Procesos</h3>
+                <img src="./images/stacer_processes.png" alt="Procesos en Stacer" class="screenshot">
+
+                <p>Puedes:</p>
+                <ul>
+                    <li>Ver todos los procesos activos</li>
+                    <li>Ordenar por uso de CPU/RAM</li>
+                    <li>Finalizar procesos</li>
+                </ul>
+
+                <h3>5. Gestión de Servicios</h3>
+                <img src="./images/stacer_services.png" alt="Servicios en Stacer" class="screenshot">
+
+                <p>Controla servicios del sistema:</p>
+                <ul>
+                    <li>Iniciar/detener servicios</li>
+                    <li>Habilitar/deshabilitar al inicio</li>
+                </ul>
+
+                <h3>6. Gestión de Repositorios APT</h3>
+                <img src="./images/stacer_repos.png" alt="Repositorios en Stacer" class="screenshot">
+
+                <p>Administra repositorios de software:</p>
+                <ul>
+                    <li>Añadir nuevos repositorios</li>
+                    <li>Eliminar o desactivar repositorios</li>
+                </ul>
+
+                <div class="function-warning">
+                    <h3>Funciones no disponibles o limitadas en Ubuntu 22.04 LTS</h3>
+                    <p>Estas características pueden faltar o no funcionar correctamente:</p>
+                    <ul>
+                        <li><strong>Gestión de usuarios</strong>: No aparece en algunas versiones de Stacer.</li>
+                        <li><strong>Aplicaciones de inicio</strong>: Puede mostrar la lista vacía (no detecta apps Snap/Flatpak).</li>
+                    </ul>
+                    <p><strong>Soluciones alternativas:</strong></p>
+                    <ul>
+                        <li>Para gestión de usuarios: Usa <code>sudo adduser nombre_usuario</code> o la configuración del sistema</li>
+                        <li>Para apps de inicio: Ejecuta <code>gnome-session-properties</code></li>
+                    </ul>
+                </div>        
+            </section>
+
+            <section id="conclusion">
+                <h2>Conclusión: ¿Recomendar Stacer en Ubuntu 22.04?</h2>
+                <div class="conclusion">
+                    <p><strong>Ventajas:</strong></p>
+                    <ul>
+                        <li>Interfaz intuitiva para monitorización básica</li>
+                        <li>Excelente herramienta de limpieza del sistema</li>
+                        <li>Útil para gestionar procesos y servicios</li>
+                        <li>Integración con repositorios APT</li>
+                    </ul>
+
+                    <p><strong>Desventajas (en Ubuntu 22.04 LTS):</strong></p>
+                    <ul>
+                        <li>Falta gestión de usuarios en algunas versiones</li>
+                        <li>Problemas con aplicaciones de inicio</li>
+                        <li>No detecta apps Snap/Flatpak en algunas funciones</li>
+                        <li>Puede consumir más recursos que herramientas de terminal</li>
+                    </ul>
+
+                    <p><strong>Recomendación final:</strong></p>
+                    <p>
+                        Stacer es <strong>recomendable para usuarios intermedios</strong> que necesitan una herramienta gráfica 
+                        para tareas básicas de monitorización y limpieza. Sin embargo, para funciones avanzadas o en Ubuntu 22.04, 
+                        es mejor complementarlo con herramientas nativas o comandos de terminal.
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Tutorial para Ubuntu 22.04 LTS - &copy; 2025 Hecho por <a href="https://github.com/carolusquintae" target="_blank">carolusquintae</a></p>
+        </footer>
+
+    </body>
+</html>
